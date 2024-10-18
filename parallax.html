@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сучасна сторінка з паралаксом</title>
+  <style>
+    /* Загальні стилі */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #2d1b3e; /* Темно-фіолетовий фон для всього тла */
+      color: #ddd; /* Світлий текст для контрасту */
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin: 20px 0;
+      font-weight: 300;
+      color: #f3e5f5; /* Світло-фіолетовий заголовок */
+    }
+
+    p {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #d1c4e9; /* Блідо-фіолетовий для параграфів */
+    }
+
+    /* Стиль для контейнера */
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    /* Parallax section */
+    .parallax {
+      background-image: url('prallax.jpg'); /* Замініть на своє зображення */
+      min-height: 600px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      filter: brightness(70%); /* Темніше зображення для контрасту */
+    }
+
+    /* Напівпрозорий текст у секції паралаксу */
+    .parallax h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 3rem;
+      background-color: rgba(43, 21, 56, 0.7); /* Темно-фіолетовий з прозорістю */
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Відключення паралаксу для планшетів і мобільних телефонів */
+    @media (max-width: 768px) {
+      .parallax {
+        background-attachment: scroll;
+      }
+
+      .parallax h1 {
+        font-size: 2rem;
+        padding: 5px 10px;
+      }
+    }
+
+    /* Контентні блоки */
+    .content {
+      padding: 40px 20px;
+      background-color: #3e275e; /* Темно-фіолетовий фон для контенту */
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тінь для глибини */
+      border-radius: 10px;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    /* Стилі для футера */
+    footer {
+      background-color: #6b0458;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #f48fb1; /* Світло-рожевий для посилань */
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Контент перед паралаксом -->
+  <div class="container">
+    <div class="content">
+      <h1>Ласкаво просимо на мою паралакс сторінку</h1>
+      <p>Прокрутіть вниз, щоб побачити паралакс ефект.</p>
+    </div>
+  </div>
+
+  <!-- Секція паралаксу -->
+  <div class="parallax">
+    <h1>Ефект паралаксу</h1>
+  </div>
+
+  <!-- Контент після паралаксу -->
+  <div class="container">
+    <div id="more-content" class="content">
+      <h2>Кельнський собор</h2>
+      <p>Кельнський собор — культова споруда, римо-католицький храм (церква) у Кельні, Німеччина. Осідок архієпископа Кельнського (нині — кардинал Райнер Марія Велькі), і парафія підпорядковується адміністрації Кельнської архидієцезії. Відомий як пам'ятка християнства та Німецького католицизму зокрема, готичної архітектури, символ тривалої віри і стійкості людей міста, в якому він стоїть</p>
+    </div>
+  </div>
+
+  <!-- Футер -->
+  <footer>
+    © 2024 Персональна сторінка Мордас Злати.
+  </footer>
+
+</body>
+</html>

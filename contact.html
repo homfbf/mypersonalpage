@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Контактна інформація</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про себе</a></li>
+            <li><a href="favorites.html">Улюблені книжки та фільми</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Контактні дані</h2>
+            <p>Email: lisiaaa789@gmail.com</p>
+            <p>Телефон: +48451187645</p>
+            <p>Telegram: @homfbf</p>
+        </section>
+
+        <!-- Форма зворотного зв'язку -->
+        <section>
+            <h2>Зворотний зв'язок</h2>
+            <div class="form-container">
+                <form action="mailto:lisiaaa789@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Ваше Ім'я:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+
+                    <label for="email">Ваш Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <label for="message">Ваше Повідомлення:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br>
+
+                    <input type="submit" value="Надіслати">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Персональна сторінка Злати</p>
+    </footer>
+</body>
+</html>
+

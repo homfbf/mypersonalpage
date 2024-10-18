@@ -1,0 +1,111 @@
+/* Стилі для загального вигляду */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #333;
+}
+
+/* Контейнер для заголовка та навігації */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* Стилі для панелі навігації */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 15px 0; /* Відступ між кнопками */
+}
+
+nav ul li a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Стилі для гри Хрестики-Нолики */
+body.tictactoe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    background-color: #f0f0f0;
+    border: 1px solid #333;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+nav {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Стилі для музичного сайту */
+.keys {
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+    background-color: #ccc;
+    border: 2px solid #000;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.1s;
+}
+
+.key:active {
+    transform: scale(1.1);
+}

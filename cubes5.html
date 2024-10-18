@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            position: relative;
+            background-color: #fff;
+            height: 100vh;
+            min-width: calc(100px * 5 + 10px * 4 + 20px);
+        }
+        .box {
+            width: 100px;
+            height: 150px;
+            background-color: #eeeff2;
+            border-left: 10px dotted #f68693;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: black;
+            margin-right: 10px;
+            cursor: pointer;
+            box-sizing: border-box;
+            padding-left: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .box:hover {
+            background-color: rgb(255, 125, 96);
+            color: rgb(218, 91, 32);
+        }
+        #boxF {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="boxA">A</div>
+    <div class="box" id="boxB">B</div>
+    <div class="box" id="boxC">C</div>
+    <div class="box" id="boxD">D</div>
+    <div class="box" id="boxE">E</div>
+    <div class="box" id="boxF">F</div>
+</body>
+</html>

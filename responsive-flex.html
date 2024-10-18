@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сучасна сторінка про Україну</title>
+  <style>
+    /* Загальні стилі */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f7f7f7; /* Світло-сірий фон */
+      color: #333; /* Темний текст */
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #003366; /* Темно-синій колір для навбару */
+      color: #FFD700; /* Яскраво-жовтий текст */
+      padding: 15px;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    /* Header section */
+    header {
+      background-image: url("2.jpg"); /* Можна замінити на своє зображення */
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      filter: brightness(70%); /* Зробити фон темнішим */
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background-color: rgba(0, 51, 102, 0.7); /* Напівпрозорий темно-синій */
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: #FFD700; /* Яскраво-жовтий текст */
+    }
+
+    /* Main Content */
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #003366; /* Темно-синій */
+    }
+
+    .content p {
+      margin-bottom: 40px;
+      color: #333; /* Темно-сірий для основного тексту */
+    }
+
+    /* Section with Flexbox for images */
+    .flex-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .flex-item {
+      width: 48%;
+      background-color: #FFDD00; /* Яскраво-жовтий для контентних блоків */
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тінь */
+      color: #003366; /* Темно-синій для тексту */
+    }
+
+    .flex-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .flex-item h3 {
+      margin: 20px 0;
+    }
+
+    .flex-item p {
+      color: #003366; /* Темно-синій для тексту в блоках */
+    }
+
+    /* Footer */
+    footer {
+      background-color: #003366; /* Темно-синій */
+      color: #FFD700; /* Яскраво-жовтий текст */
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #FFDD00; /* Світло-жовтий для посилань */
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .flex-item {
+        width: 100%;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    Україна - Наша Гордість
+  </nav>
+
+  <!-- Header Section -->
+  <header>
+    <div>
+      <h1>Слава Україні</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2>Відчуйте велич України</h2>
+    <p>Україна — це країна неймовірних пейзажів, багатовікової історії та величезної культурної спадщини. Від Карпатських гір до Чорного моря, від древнього Києва до сучасних міст — Україна вражає своєю різноманітністю.</p>
+
+    <!-- Flexbox Section -->
+    <div class="flex-section">
+      <div class="flex-item">
+        <img src="1.jpeg" alt="Про Україну">
+        <h3>ІСТОРІЯ УКРАЇНИ</h3>
+        <p>Дізнайтеся більше про величну історію та боротьбу українського народу за незалежність.</p>
+      </div>
+      <div class="flex-item">
+        <img src="3.jpg" alt="Культура України">
+        <h3>КУЛЬТУРА І ТРАДИЦІЇ</h3>
+        <p>Українська культура є однією з найдавніших і найрізноманітніших у світі. Зануртесь у традиції та народне мистецтво.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    © 2024 Персональна сторінка Мордас Злати.
+  </footer>
+
+</body>
+</html>

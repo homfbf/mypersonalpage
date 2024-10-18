@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2 - Personal Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #f2f2f2;
+        }
+
+        .photo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .photo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .form-container {
+            width: 30%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            margin: 50px 0 20px 0;
+            text-align: center;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #ff9ab8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #f092ae;
+        }
+
+        .skills-table {
+            width: 50%;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .skills-table td {
+            padding: 8px;
+        }
+
+        .stars {
+            display: inline-block;
+            pointer-events: none;
+        }
+
+        .star {
+            font-size: 16px;
+            color: gold;
+        }
+
+        .table-container {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 220px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ff9ab8;
+            color: white;
+        }
+
+        .mood-form-container {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 220px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+        }
+
+        .mood-form-container input[type="submit"] {
+            background-color: #ffa3a3;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            padding: 8px;
+        }
+
+        .mood-form-container input[type="submit"]:hover {
+            background-color: #ff9ab8;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про себе</a></li>
+            <li><a href="favorites.html">Улюблені</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <div class="photo">
+        <img src="rjomba.jpg" alt="Фото">
+    </div>
+
+    <div class="form-container">
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <label for="name">Ваше Ім'я:</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Ваш Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Ваше Повідомлення:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <h2 style="text-align: center; color: #ff9abd;">Навички (Skills)</h2>
+    <table class="skills-table">
+        <tr>
+            <td>HTML(5)</td>
+            <td>
+                <div class="stars" data-skill="html">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+            </td>
+            <td>C++</td>
+            <td>
+                <div class="stars" data-skill="cpp">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>CSS(3)</td>
+            <td>
+                <div class="stars" data-skill="css">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+            </td>
+            <td>Photography</td>
+            <td>
+                <div class="stars" data-skill="photography">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Javascript</td>
+            <td>
+                <div class="stars" data-skill="javascript">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+            </td>
+            <td>Painting</td>
+            <td>
+                <div class="stars" data-skill="painting">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="table-container">
+        <h3>Перелік лабораторій кафедри</h3>
+        <table>
+            <tr>
+                <th>Номер аудиторії</th>
+                <th>Призначення</th>
+            </tr>
+            <tr>
+                <td>11.119</td>
+                <td>Кабінет завідувача кафедри</td>
+            </tr>
+            <tr>
+                <td>11.118</td>
+                <td>Викладацька</td>
+            </tr>
+            <tr>
+                <td>11.116 - 11.117</td>
+                <td>Комп'ютерний клас</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="mood-form-container">
+        <h3>Як справи?</h3>
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <label for="mood">Ваш настрій:</label><br>
+            <textarea id="mood" name="mood" rows="3" required></textarea><br>
+            <input type="submit" value="Відправити">
+        </form>
+    </div>
+
+</body>
+</html>
